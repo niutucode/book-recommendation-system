@@ -1,17 +1,16 @@
 # book-recommendation-system
 利用kNN算法实现图书推荐系统，前台使用的是微信小程序，后台使用的时Spring Boot+MyBatis，数据库使用的时MySQL+Redis
+## 系统简介
+该图书推荐系统是基于KNN算法来实现，用户可以通过此系统来检索想要图书的相关信息，并且推荐算法可以向用户推荐相似的图书，对检索到的图书可以查看简介以及评价等相关信息，用户也可以对其进行评价，并可以对自己的评价加以删除，除此之外，通过用户的近几次搜索，可以向用户推荐适合他的相关图书。
 
 ## 技术栈
 ### 前端
 微信小程序
 ### 后端
-Spring Boot
-MyBatis
-FastDFS
-Ehcache
-阿里云短信服务
+Spring Boot、MyBatis、FastDFS、Ehcache、阿里云短信服务
 ### 数据库
-MySQL
-Redis
+MySQL、Redis
+### 推荐系统
+kNN算法
 
 
