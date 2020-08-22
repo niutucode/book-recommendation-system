@@ -1,0 +1,49 @@
+/* pages/login.wxss */
+
+.input {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.input .phone {
+  display: flex;
+}
+
+.input .phone .phoneNumber {
+  flex: 1;
+  padding: 8rpx 50rpx;
+  font-size: 40rpx;
+}
+
+.input .phone .auth {
+  padding-right: 50rpx;
+  padding-top: 15rpx;
+  font-size: 25rpx;
+  color: #37aeb4;
+}
+
+.input .underline {
+  margin-left: 45rpx;
+  margin-right: 45rpx;
+  margin-top: 13rpx;
+  background: #e0e3da;
+  height: 2rpx;
+}
+
+.input .authNumber {
+  padding-top: 50rpx;
+  padding-bottom: 8rpx;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  font-size: 40rpx;
+}
+
+.input .button {
+  margin-top: 100rpx;
+  width: 600rpx;
+  background-color: #37aeb4;
+  color: #f8f8ef;
+  letter-spacing: 10rpx;
+  font-size: 35rpx;
+}

@@ -1,0 +1,40 @@
+.top {
+  display: flex;
+}
+
+.top .searchbar {
+  flex: 1;
+}
+
+.top .set {
+  width: 40rpx;
+  height: 50rpx;
+}
+
+.authorization .logo-item {
+  margin-top: -50rpx;
+  margin-left: -80rpx;
+  width: 120%;
+  height: 1100rpx;
+}
+
+.authorization .button-item {
+  background-color: #37aeb4;
+  color: #f8f8ef;
+  margin-top: -450rpx;
+  width: 600rpx;
+  font-weight: normal;
+  font-size: 35rpx;
+  letter-spacing: 10rpx;
+  font-family: "Microsoft YaHei";
+}
+
+.authorization .login {
+  text-align: center;
+  margin-top: 30rpx;
+  color: #457fab;
+  font-weight: normal;
+  font-size: 30rpx;
+  letter-spacing: 5rpx;
+  font-family: "Microsoft YaHei";
+}

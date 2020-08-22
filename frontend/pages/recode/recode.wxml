@@ -1,0 +1,23 @@
+<!--pages/recode/recode.wxml-->
+<view wx:for="{{allComments}}" wx:key="id">
+  <view class="group-top">
+    <image class="thumbnail" src="{{item.avatar}}"></image>
+    <view class="group-right">
+      <view class="group-right-top">
+        <view class="title">
+          {{item.name}}
+        </view>
+        <stars class="stars" rate="{{item.score}}" starSize="25" fontSize="25" fontColor="#6D6C6C"></stars>
+        <image class="delete" src="../../images/delete.png" bindtap="deleteComment" data-score="{{item.score}}" data-pubdate="{{item.pubdate}}" data-summary="{{item.summary}}" data-index="{{index}}"></image>
+      </view>
+      <view class="date">
+        发布时间：{{item.pubdate}}
+      </view>
+    </view>
+  </view>
+  <view class="group-bottom">
+    {{item.summary}}
+  </view>
+  <view class="underline"></view>
+</view>
+<loadingmore hasMore="{{hasMore}}"></loadingmore>

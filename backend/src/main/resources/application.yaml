@@ -1,0 +1,9 @@
+#FastDFS配置文件
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:             #缩略图生成参数
+    width: 48
+    height: 48
+  tracker-list:            #TrackerList参数,支持多个
+    - 47.100.139.173:22122

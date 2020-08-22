@@ -1,0 +1,61 @@
+<!-- 详情页 -->
+
+<view class="item-header">
+  <view class="item-title">{{item.title}}</view>
+  <view class="item-detail">
+    <view class="left-detail">
+      <view class="item-rate">
+        <stars rate="{{item.score}}" starSize="30" fontSize="30"></stars>
+        <text class="comment-persons">{{total.count}}人评价</text>
+      </view>
+      <view class="item-sub-detail">
+        <view class="item-editor">
+          <p wx:if="{{item.author !== null}}">
+            {{item.author}}[著]
+          </p>
+          <p wx:if="{{item.translator !== null}}">
+            / {{item.translator}}[译]
+          </p>
+        </view>
+        <view wx:if="{{item.publisher !== null}}" class="item-publish">
+          出版社：{{item.publisher}}
+        </view>
+        <view wx:if="{{item.pubdate !== null}}" class="item-date">
+          出版日期：{{item.pubdate}}
+        </view>
+        <view wx:if="{{item.pages !== null}}" class="pages">
+          页数：{{item.pages}}
+        </view>
+      </view>
+    </view>
+    <view class="right-detail">
+      <image src="{{item.cover}}"></image>
+    </view>
+  </view>
+</view>
+
+<view class="item-description">
+  <view class="item-description-title">简介</view>
+  <view wx:if="{{item.summary != null}}" class="item-show">
+    {{item.summary}}
+  </view>
+  <view wx:else class="item-show">
+    暂无
+  </view>
+</view>
+
+<view class="item-tags">
+  <view class="item-tags-title">标签</view>
+  <view class="item-tags-list">
+    <text wx:for="{{tags}}" wx:key="id">{{item}}</text>
+  </view>
+</view>
+
+<view class="comment-list-group">
+  <view class="comment-title">短评({{total.count}})</view>
+  <view wx:for="{{comments}}" wx:key="id">
+    <onecomment item="{{item}}"></onecomment>
+  </view>
+</view>
+
+<navigator class="more-comment" url="/pages/comment/comment?id={{id}}&thumbnail={{item.cover}}&title={{item.title}}&rate={{item.score}}&total={{total.count}}&type={{type}}">查看更多短评</navigator>

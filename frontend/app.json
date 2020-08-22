@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recode/recode",
+    "pages/set/set",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/write/write",
+    "pages/search/search",
+    "pages/comment/comment",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#37aeb4",
+    "navigationBarTitleText": "书虫",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

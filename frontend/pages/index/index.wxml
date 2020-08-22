@@ -1,0 +1,42 @@
+<view wx:if="{{isAuthorizationed == false}}" class="authorization">
+  <image src="../../images/big-logo.jpg" class="logo-item"></image>
+  <button open-type="getUserInfo" bindgetuserinfo='getUser' class="button-item">微信用户一键登录</button>
+  <navigator url="/pages/login/login" class="login">手机号码登录/注册</navigator>
+</view>
+
+<view wx:else>
+  <!-- 首页 -->
+  <searchbar isNavigator="{{true}}" class="searchbar"></searchbar>
+  <!-- 推荐 -->
+  <indexmodule title="猜你喜欢" kinds="{{recommendation}}" more="{{false}}"></indexmodule>
+
+  <!-- 文学综合馆 -->
+  <indexmodule title="文学综合馆" kinds="{{literature}}" moreUrl="/pages/list/list?type=literature" type="literature"></indexmodule>
+
+  <!-- 童书馆 -->
+  <indexmodule title="童书馆" kinds="{{child}}" moreUrl="/pages/list/list?type=child" type="child"></indexmodule>
+
+  <!-- 教育馆 -->
+  <indexmodule title="教育馆" kinds="{{education}}" moreUrl="/pages/list/list?type=education" type="education"></indexmodule>
+
+  <!-- 人文社科馆 -->
+  <indexmodule title="人文社科馆" kinds="{{humanity}}" moreUrl="/pages/list/list?type=humanity" type="humanity"></indexmodule>
+
+  <!-- 经管综合馆 -->
+  <indexmodule title="经管综合馆" kinds="{{economics}}" moreUrl="/pages/list/list?type=economics" type="economics"></indexmodule>
+
+  <!-- 励志成功馆 -->
+  <indexmodule title="励志成功馆" kinds="{{motivational}}" moreUrl="/pages/list/list?type=motivational" type="motivational"></indexmodule>
+
+  <!-- 生活馆 -->
+  <indexmodule title="生活馆" kinds="{{life}}" moreUrl="/pages/list/list?type=life" type="life"></indexmodule>
+
+  <!-- 艺术馆 -->
+  <indexmodule title="艺术馆" kinds="{{art}}" moreUrl="/pages/list/list?type=art" type="art"></indexmodule>
+
+  <!-- 科技馆 -->
+  <indexmodule title="科技馆" kinds="{{technology}}" moreUrl="/pages/list/list?type=technology" type="technology"></indexmodule>
+
+  <!-- 计算机馆 -->
+  <indexmodule title="计算机馆" kinds="{{computer}}" moreUrl="/pages/list/list?type=computer" type="computer"></indexmodule>
+</view>

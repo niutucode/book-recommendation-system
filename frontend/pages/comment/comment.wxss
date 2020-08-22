@@ -1,0 +1,61 @@
+/* pages/comment/comment.wxss */
+
+.container {
+  padding: 20rpx 30rpx;
+}
+
+.item-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item-group .thumbnail {
+  width: 40rpx;
+  height: 50rpx;
+}
+
+.item-group .item-title {
+  font-size: 32rpx;
+  color: #37aeb4;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+
+.item-group .item-rate {
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+
+.item-group .write {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: auto;
+}
+
+.write .comment {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: auto;
+}
+
+.comment-title {
+  margin-top: 60rpx;
+  font-size: 40rpx;
+}
+
+.page-btn-group {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-btn-group .page-btn {
+  flex: 1;
+  height: 90rpx;
+  color: #898989;
+  border-color: #3c3c3c;
+  line-height: 60rpx;
+}

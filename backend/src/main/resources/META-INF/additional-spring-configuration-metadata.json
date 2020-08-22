@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "aliyun.sms.access.id",
+      "type": "java.lang.String",
+      "description": "Description for alibaba.cloud-sms.access-id."
+    },
+    {
+      "name": "aliyun.sms.access.secret",
+      "type": "java.lang.String",
+      "description": "Description for alibaba.cloud-sms.access-secret."
+    }
+  ]
+}

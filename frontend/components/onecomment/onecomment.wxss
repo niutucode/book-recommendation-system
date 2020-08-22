@@ -1,0 +1,50 @@
+.comment-group {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 40rpx;
+}
+
+.comment-group .left-comment {
+  width: 70rpx;
+  margin-right: 20rpx;
+}
+
+.left-comment .avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.comment-group .right-comment {
+  flex: 1;
+}
+
+.right-comment .username-rate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.username-rate .username {
+  font-size: 34rpx;
+  margin-right: 20rpx;
+}
+
+.username-rate .item.star {
+  font-size: 28rpx;
+  color: #b3b3b3;
+  font-style: italic;
+  margin-right: 20rpx;
+}
+
+.release-time {
+  color: #b3b3b3;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+}
+
+.content {
+  font-size: 30rpx;
+  color: #353535;
+  margin-top: 12rpx;
+}

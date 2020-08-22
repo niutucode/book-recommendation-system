@@ -1,0 +1,6 @@
+<!-- 图书种类列表页 -->
+<searchbar isNavigator="{{true}}"></searchbar>
+<view class="container">
+  <itemview wx:for="{{items}}" wx:key="id" item="{{item}}" itemUrl="/pages/detail/detail?type={{item.type}}&id={{item.bookId}}"></itemview>
+</view>
+<loadingmore hasMore="{{hasMore}}"></loadingmore>

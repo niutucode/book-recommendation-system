@@ -1,0 +1,22 @@
+<!-- 评论页 -->
+<view class="container">
+  <view class="item-group">
+    <image class="thumbnail" src="{{thumbnail}}">
+    </image>
+    <text class="item-title" bindtap="onItemTapEvent">{{title}}</text>
+    <text class="item-rate">{{rate}}分</text>
+    <navigator url="/pages/write/write?id={{id}}&thumbnail={{thumbnail}}&title={{title}}&rate={{rate}}&total={{total}}&type={{type}}" class="write">
+      <image class="comment" src="../../images/comment.png"></image>
+    </navigator>
+  </view>
+
+  <view class="comment-title">全部短评({{total}})</view>
+  <view wx:for="{{data}}" wx:key="id">
+    <onecomment item="{{item}}"></onecomment>
+  </view>
+
+  <view class="page-btn-group">
+    <button class="page-btn" bindtap="onPrePageTap" disabled="{{start <= 1}}" loading="{{preLoading}}">上一页</button>
+    <button class="page-btn" bindtap="onNextPageTap" disabled="{{start >= totalPages}}" loading="{{nextLoading}}">下一页</button>
+  </view>
+</view>

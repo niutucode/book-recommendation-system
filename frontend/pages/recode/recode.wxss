@@ -1,0 +1,57 @@
+/* pages/recode/recode.wxss */
+
+.group-top {
+  display: flex;
+}
+
+.group-top .thumbnail {
+  height: 70rpx;
+  width: 60rpx;
+  padding-left: 20rpx;
+  padding-top: 25rpx;
+  padding-right: 20rpx;
+}
+
+.group-top .group-right .group-right-top .title {
+  color: #6d6c6c;
+  padding-top: 25rpx;
+  font-size: 25rpx;
+  padding-right: 15rpx;
+}
+
+.group-top .group-right .group-right-top .stars {
+  padding-top: 25rpx;
+}
+
+.group-top .group-right .group-right-top .delete {
+  padding-left: 320rpx;
+  padding-top: 33rpx;
+  width: 37rpx;
+  height: 40rpx;
+}
+
+.group-top .group-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-top .group-right .group-right-top {
+  display: flex;
+}
+
+.group-top .group-right .date {
+  font-size: 20rpx;
+  color: #c5c5c5;
+}
+
+.group-bottom {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  font-size: 25rpx;
+}
+
+.underline {
+  margin-top: 25rpx;
+  background: #e0e3da;
+  height: 2rpx;
+}

@@ -1,0 +1,53 @@
+<!--pages/user/user.wxml-->
+<form bindsubmit="submit">
+  <view class="father-2">
+    <image src="../../images/phone.png" class="thumbnail-2"></image>
+    <input name="phoneNumber" type="string" class="text-2" value="{{phoneNumber}}" disabled="true"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father">
+    <image src="../../images/nick-name.png" class="thumbnail"></image>
+    <input name="nickName" type="string" class="text" placeholder="请输入昵称" value="{{nickName}}"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father-2">
+    <image src="../../images/country.png" class="thumbnail-2"></image>
+    <input name="country" type="string" class="text-2" placeholder="请输入国籍" value="{{country}}"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father-2">
+    <image src="../../images/province.png" class="thumbnail-2"></image>
+    <input name="province" type="string" class="text-2" placeholder="请输入省份" value="{{province}}"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father-2">
+    <image src="../../images/city.png" class="thumbnail-2"></image>
+    <input name="city" type="string" class="text-2" placeholder="请输入城市" value="{{city}}"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father-2">
+    <image src="../../images/language.png" class="thumbnail-2"></image>
+    <input name="language" type="string" class="text-2" placeholder="请输入语言" value="{{language}}"></input>
+  </view>
+  <view class="underline"></view>
+
+  <view class="father-2">
+    <image src="../../images/gender.png" class="thumbnail-2"></image>
+    <radio-group name="gender" value="男">
+      <label class="radio">
+        <radio value="男" checked="{{male}}"/>男
+      </label>
+      <label>
+        <radio value="女" checked="{{female}}"/>女
+      </label>
+    </radio-group>
+  </view>
+  <view class="underline"></view>
+
+  <button form-type="submit" class="button">提交</button>
+</form>

@@ -1,0 +1,7 @@
+<!-- 星星和评分组件 -->
+<view class="rate-group">
+  <image wx:for="{{lights}}" wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx" src="/images/rate_light.png"></image>
+  <image wx:for="{{halfs}}" wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx" src="/images/rate_half.png"></image>
+  <image wx:for="{{grays}}" wx:key="*this" style="width:{{starSize}}rpx;height:{{starSize}}rpx" src="/images/rate_gray.png"></image>
+  <text wx:if="{{isText}}" style="font-size:{{fontSize}}rpx;color:{{fontColor}}">{{rateText}}</text>
+</view>

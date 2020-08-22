@@ -1,0 +1,10 @@
+<view>
+  <form bindsubmit='submitEvent' class="text">
+    <textarea name="content" show-confirm-bar="{{false}}" auto-focus="{{true}}" placeholder='请输入内容...' bindinput="getCount" maxlength="200" class="content"> </textarea>
+    <view class="bottom">
+      <marks bindchange="onChangeEvent" class="marks"></marks>
+      <text class="text">{{count}}个字</text>
+      <button class="launch" form-type='submit'>发表</button>
+    </view>
+  </form>
+</view>

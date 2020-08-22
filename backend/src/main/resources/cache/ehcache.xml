@@ -1,0 +1,253 @@
+<!--
+相关配置含义
+1. name:缓存名称。
+2. maxElementsInMemory：缓存最大个数。
+3. eternal:对象是否永久有效，一但设置了，timeout将不起作用。
+4. timeToIdleSeconds：设置对象在失效前的允许闲置时间（单位：秒）。仅当eternal=false对象不是永久有效时
+                      使用，可选属性，默认值是0，也就是可闲置时间无穷大。
+5. timeToLiveSeconds：设置对象在失效前允许存活时间（单位：秒）。最大时间介于创建时间和失效时间之间。
+                      仅当eternal=false对象不是永久有效时使用，默认是0.，也就是对象存活时间无穷大。
+6. overflowToDisk：当内存中对象数量达到maxElementsInMemory时，Ehcache将会对象写到磁盘中。
+7. diskSpoolBufferSizeMB：这个参数设置DiskStore（磁盘缓存）的缓存区大小。默认是30MB。
+                          每个Cache都应该有自己的一个缓冲区。
+8. maxElementsOnDisk：硬盘最大缓存个数。
+9. diskPersistent：是否缓存虚拟机重启期数据。
+10. diskExpiryThreadIntervalSeconds：磁盘失效线程运行时间间隔，默认是120秒。
+11. memoryStoreEvictionPolicy：当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。
+                               默认策略是LRU（最近最少使用）。你可以设置为FIFO（先进先出）或是
+                               LFU（较少使用）。
+12. clearOnFlush：内存数量最大时是否清除。
+13. diskStore 则表示临时缓存的硬盘目录。
+-->
+
+<ehcache>
+    <diskStore path="C:\Users\Administrator\Desktop\book-recommendation-system\User\ehcache" />
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120" />
+
+    <!--AllComment-->
+    <cache name="queryAllCommentsByUid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- ArtComment -->
+    <cache name="queryThreeArtCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryArtCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- ChildrenComment -->
+    <cache name="queryThreeChildrenCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryChildrenCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- ComputerComment -->
+    <cache name="queryThreeComputerCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryComputerCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- DetailInfo -->
+    <cache name="queryDetailInfosByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="acquireTenSimilarityKeyInfos"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- EconomicsComment -->
+    <cache name="queryThreeEconomicsCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryEconomicsCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600"  />
+
+    <!-- EducationComment -->
+    <cache name="queryThreeEducationCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryEducationCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- HumanityComment -->
+    <cache name="queryThreeHumanityCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryHumanityCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- KeyInfo -->
+    <cache name="queryTenKeyInfosByType"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryAllKeyInfosByType"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="acquireTenRecommendKeyInfos"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- LifeComment -->
+    <cache name="queryThreeLifeCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryLifeCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- LiteratureComment -->
+    <cache name="queryThreeLiteratureCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryLiteratureCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- MotivationalComment -->
+    <cache name="queryThreeMotivationalCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryMotivationalCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- Search -->
+    <cache name="queryDetailInfosByTitleLike"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- TechnologyComment -->
+    <cache name="queryThreeTechnologyCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryTechnologyCommentsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- BookTag-->
+    <cache name="queryLabelsByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- CommentTotals -->
+    <cache name="queryCommentTotalByBid"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+
+    <!-- PhoneUser -->
+    <cache name="queryPhoneUserByPhoneNumber"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+    <cache name="queryAvatarUrlAndNickNameByPhoneNumber"
+           maxElementsInMemory="10000"
+           eternal="true"
+           overflowToDisk="true"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="600" />
+</ehcache>

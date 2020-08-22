@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "stars": "/components/stars/stars",
+    "onecomment": "/components/onecomment/onecomment"
+  }
+}

@@ -1,0 +1,56 @@
+/* pages/user/user.wxss */
+
+.father {
+  display: flex;
+  margin-left: 15rpx;
+  margin-top: 20rpx;
+}
+
+.father .thumbnail {
+  width: 60rpx;
+  height: 60rpx;
+  padding-right: 15rpx;
+}
+
+.father .text {
+  padding-top: 9rpx;
+  font-size: 30rpx;
+}
+
+.underline {
+  margin-top: 15rpx;
+  background: #e0e3da;
+  height: 2rpx;
+}
+
+.father-2 {
+  display: flex;
+  margin-left: 15rpx;
+  margin-top: 30rpx;
+}
+
+.father-2 .thumbnail-2 {
+  width: 46rpx;
+  height: 46rpx;
+  padding-right: 18rpx;
+  padding-left: 12rpx;
+  padding-bottom: 10rpx;
+}
+
+.father-2 .text-2 {
+  font-size: 30rpx;
+}
+
+.radio {
+  padding-left: 15rpx;
+  padding-right: 65rpx;
+}
+
+.button {
+  margin-top: 100rpx;
+  width: 600rpx;
+  background-color: #37aeb4;
+  color: #f8f8ef;
+  letter-spacing: 10rpx;
+  font-size: 35rpx;
+}

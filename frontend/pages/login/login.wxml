@@ -1,0 +1,13 @@
+<!-- 登录或注册 -->
+<form bindsubmit="submit">
+  <view class="input">
+    <view class="phone">
+      <input disabled="{{!smsFlag}}" name="phoneNumber" type="number" class="phoneNumber" placeholder="请输入手机号" bindinput="getPhoneNumber"></input>
+      <view wx:if="{{phone}}" style="padding-right: 50rpx; padding-top: 15rpx; font-size: 28rpx; color: {{sendColor}};" bindtap="getAuthNumber">{{sendTime}}</view>
+    </view>
+    <view class="underline"></view>
+    <input name="authNumber" type="number" class="authNumber" placeholder="请输入验证码"></input>
+    <view class="underline"></view>
+    <button form-type="submit" class="button">登录</button>
+  </view>
+</form>

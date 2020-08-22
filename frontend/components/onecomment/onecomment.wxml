@@ -1,0 +1,19 @@
+<!-- 一个短评组件 -->
+<view class="comment-group">
+  <view class="left-comment">
+    <image class="avatar" src="{{item.avatarUrl}}"></image>
+  </view>
+  <view class="right-comment">
+    <view class="username-rate">
+      <text class="username">{{item.nickName}}</text>
+      <view class="item.star" wx:if="{{item.score == null}}">
+        <p>未评分</p>
+      </view>
+      <view wx:else>
+        <stars rate="{{item.score}}" starSize="30" isText="{{false}}"></stars>
+      </view>
+    </view>
+    <view class="release-time">{{item.pubdate}}</view>
+    <view class="content">{{item.summary}}</view>
+  </view>
+</view>

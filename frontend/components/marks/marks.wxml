@@ -1,0 +1,8 @@
+<view class="rate">
+  <view class="rate__item" wx:for="{{value > 0 ? values : placeholders}}" wx:key="id">
+    <view class="rate__item--icon icon{{value > 0 ? '':'-placeholder'}}-{{iconClassMap[item]}}">
+      <view bindtap="choose" data-index="{{index}}" data-half="1"></view>
+      <view bindtap="choose" data-index="{{index}}" data-half="0"></view>
+    </view>
+  </view>
+</view>

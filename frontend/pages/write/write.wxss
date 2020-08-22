@@ -1,0 +1,46 @@
+/* pages/wirte/write.wxss */
+
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+.text .content {
+  padding-top: 20rpx;
+  width: 700rpx;
+  height: 600rpx;
+}
+
+.authorization {
+  padding-top: 50rpx;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom .marks {
+  padding-left: 20rpx;
+}
+
+.bottom .text {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  padding-right: 10rpx;
+  width: 200rpx;
+  color: #c6c6b8;
+}
+
+.bottom .launch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #087cda;
+  border-radius: 40rpx;
+  color: #eeeeed;
+  height: 50rpx;
+  width: 160rpx;
+  font-size: 28rpx;
+}

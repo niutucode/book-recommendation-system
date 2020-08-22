@@ -1,0 +1,21 @@
+<!-- 搜索页 -->
+<searchbar bindsearchInput="onSearchInputEvent"></searchbar>
+<view class="history-list-group" wx:if="{{histories && !subject}}">
+  <view class="history-title">
+    <view class="title">历史记录</view>
+    <view class="clear" bindtap="onClearEvent">清除</view>
+  </view>
+  <navigator wx:if="{{hidden === false}}" wx:for="{{histories}}" wx:key="id" url="/pages/detail/detail?id={{item.id}}&type={{item.type}}" class="history-group">{{item.title}}</navigator>
+</view>
+
+<view class="item-list-group" wx:if="{{hidden === true}}">
+  <view class="item-list-group">
+    <view wx:for="{{content}}" class="item-group" wx:key="id" bindtap="onItemTapEvent" data-id="{{item.id}}" data-title="{{item.title}}" data-type="{{item.type}}">
+      <image src="{{item.cover}}" class="thumbnail"></image>
+      <view class="info-group">
+        <view class="title">{{item.title}}</view>
+        <view class="rate-year">{{item.score}}分 / {{item.author}}[著]</view>
+      </view>
+    </view>
+  </view>
+</view>

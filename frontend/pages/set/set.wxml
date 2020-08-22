@@ -1,0 +1,25 @@
+<!--pages/set/set.wxml-->
+<view class="key-info">
+  <view class="image">
+    <image class="avatar" src="{{avatarUrl}}" bindtap="setAvatar"></image>
+  </view>
+  <view class="text">{{nickName}}</view>
+</view>
+
+<view wx:if="{{phoneUser}}">
+  <view class="bottom">
+    <image src="../../images/user.png" class="thumbnail"></image>
+    <navigator url="/pages/user/user">
+      <view class="text">用户信息</view>
+    </navigator>
+  </view>
+  <view class="underline"></view>
+</view>
+
+<view class="bottom">
+  <image src="../../images/recode.png" class="thumbnail"></image>
+  <navigator url="/pages/recode/recode">
+    <view class="text">评论记录</view>
+  </navigator>
+</view>
+<view class="underline"></view>

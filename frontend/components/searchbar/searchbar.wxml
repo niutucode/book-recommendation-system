@@ -1,0 +1,10 @@
+<!--搜索栏组件-->
+<view class="searchbar">
+  <navigator wx:if="{{isNavigator}}" url="/pages/search/search" class="search-navigator"></navigator>
+  <view wx:else class="search-input-group">
+    <input class="search-input" placeholder="搜一搜" bindinput="onInputEvent"></input>
+  </view>
+  <navigator wx:if="{{isSet}}" url="/pages/set/set">
+    <image class="set" src="../../images/set.png"></image>
+  </navigator>
+</view>

@@ -1,0 +1,10 @@
+<!-- 首页主要信息组件 -->
+<view class="module-group">
+  <view class="module-top">
+    <view class="module-title">{{title}}</view>
+    <navigator wx:if="{{more}}" url="{{moreUrl}}" class="module-more">更多</navigator>
+  </view>
+  <scroll-view class="module-scroll-view" scroll-x="{{true}}">
+    <itemview wx:for="{{kinds}}" wx:key="id" item="{{item}}" itemUrl="/pages/detail/detail?type={{item.type}}&id={{item.bookId}}"></itemview>
+  </scroll-view>
+</view>
