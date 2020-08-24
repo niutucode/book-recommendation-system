@@ -6,4 +6,4 @@ fdfs:
     width: 48
     height: 48
   tracker-list:            #TrackerList参数,支持多个
-    - 47.100.139.173:22122
+    - xx.xxx.xxx.xxx:xxxxx
